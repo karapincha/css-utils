@@ -1,4 +1,6 @@
 const path = require("path");
+const TerserJSPlugin = require("terser-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
@@ -7,8 +9,7 @@ module.exports = {
 		spacer: "./scss/utils/spacer.scss",
 	},
 	output: {
-		filename: "[name].js",
-		path: path.resolve(__dirname, "build"),
+		path: path.resolve(__dirname, "css"),
 	},
 	watch: true,
 	module: {
@@ -16,6 +17,7 @@ module.exports = {
 			{
 				test: /\.s?css$/,
 				use: [
+					"style-loader",
 					{
 						loader: MiniCssExtractPlugin.loader,
 						options: {
@@ -28,7 +30,14 @@ module.exports = {
 							importLoaders: 1,
 						},
 					},
-					"sass-loader",
+					{
+						loader: "sass-loader",
+						options: {
+							sassOptions: {
+								outputStyle: "compressed",
+							},
+						},
+					},
 				],
 			},
 		],
