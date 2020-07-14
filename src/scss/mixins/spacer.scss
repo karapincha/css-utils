@@ -1,0 +1,55 @@
+@mixin spacer($start: 0, $end: 100, $marginPrefix: m, $paddingPrefix: p, $prefix: "") {
+	$spacer: 1px;
+	$spacer-x: $spacer;
+	$spacer-y: $spacer;
+
+	$spacers: ();
+
+	@for $i from $start through $end {
+		$spacers: map-merge(
+			$spacers,
+			(
+				$i: (
+					x: $spacer-x * $i,
+					y: $spacer-y * $i,
+				),
+			)
+		);
+	}
+
+	@each $prop, $abbrev in (margin: m, padding: p) {
+		@each $size, $lengths in $spacers {
+			$length-x: map-get($lengths, x);
+			$length-y: map-get($lengths, y);
+
+			// All 4 axis
+			.#{$prefix}#{$abbrev}-#{$size} {
+				#{$prop}: $length-y $length-x !important;
+			}
+
+			// Individual axis
+			.#{$prefix}#{$abbrev}t-#{$size} {
+				#{$prop}-top: $length-y !important;
+			}
+			.#{$prefix}#{$abbrev}r-#{$size} {
+				#{$prop}-right: $length-x !important;
+			}
+			.#{$prefix}#{$abbrev}b-#{$size} {
+				#{$prop}-bottom: $length-y !important;
+			}
+			.#{$prefix}#{$abbrev}l-#{$size} {
+				#{$prop}-left: $length-x !important;
+			}
+
+			// XY Axis
+			.#{$prefix}#{$abbrev}x-#{$size} {
+				#{$prop}-right: $length-x !important;
+				#{$prop}-left: $length-x !important;
+			}
+			.#{$prefix}#{$abbrev}y-#{$size} {
+				#{$prop}-top: $length-y !important;
+				#{$prop}-bottom: $length-y !important;
+			}
+		}
+	}
+}
