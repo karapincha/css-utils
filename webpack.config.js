@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
 	mode: "development",
 	entry: {
-		spacer: "./src/scss/utils/spacer.scss",
+		spacer: "./scss/utils/spacer.scss",
 	},
 	output: {
 		filename: "[name].js",

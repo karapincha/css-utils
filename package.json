@@ -1,5 +1,5 @@
 {
-	"name": "karapincha-css-utils",
+	"name": "css-helper-utils",
 	"version": "0.1.0",
 	"description": "CSS utility classes for faster UI development",
 	"main": "index.js",
