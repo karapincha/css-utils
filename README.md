@@ -13,8 +13,8 @@ CSS utility helpers are simply a pre-compiled set of CSS classes for common styl
 
 ## Installation
 
-### <img src="https://cdn.worldvectorlogo.com/logos/npm.svg" height="12" /> NPM
+### <img src="https://cdn.worldvectorlogo.com/logos/npm.svg" height="12" /> npm
 `npm i css-helper-utils --save`
 
-#### <img src="https://cdn.worldvectorlogo.com/logos/yarn.svg" height="16" /> Yarn
+#### <img src="https://cdn.worldvectorlogo.com/logos/yarn.svg" height="16" /> yarn
 `yarn add css-helper-utils`
