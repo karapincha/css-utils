@@ -2,19 +2,19 @@
 
 [![npm (tag)](https://img.shields.io/npm/v/css-helper-utils/latest?color=success&logo=GitHub)](https://www.npmjs.com/package/css-helper-utils)
 
-### What are CSS utility helpers?
+## What are CSS utility helpers?
 CSS utility helpers are simply a pre-compiled set of CSS classes for common style fixes. the library includes the SCSS mixins for the same as-well, if you prefer to compile them directly on your project.
 
-### Available Utilities
+## Available Utilities
 - ⚡️ Margin
 - ⚡️ Padding
 - ⚡️ Display
 - More to be added...
 
-### Installation
+## Installation
 
-#### Via NPM
+### <img src="https://cdn.worldvectorlogo.com/logos/npm.svg" height="12" /> NPM
 `npm i css-helper-utils --save`
 
-#### Via Yarn
+#### <img src="https://cdn.worldvectorlogo.com/logos/yarn.svg" height="12" /> Yarn
 `yarn add css-helper-utils`
