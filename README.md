@@ -1,6 +1,6 @@
 # <img src="https://cdn.peiris.xyz/karapincha/karapincha-monochrome-sm.png" height="40" width="40" />&nbsp;&nbsp;CSS Utility Helpers
 
-[![npm (tag)](https://img.shields.io/npm/v/css-helper-utils/latest?color=success&logo=GitHub)](https://www.npmjs.com/package/css-helper-utils)
+[![npm (tag)](https://img.shields.io/npm/v/css-helper-utils/latest?color=success&logo=GitHub)](https://www.npmjs.com/package/css-helper-utils) ![NPM](https://img.shields.io/npm/l/css-helper-utils)
 
 ## What are CSS utility helpers?
 CSS utility helpers are simply a pre-compiled set of CSS classes for common style fixes which you could use inline on html elements. the library includes the SCSS mixins for the same as-well, if you prefer to compile them directly on your project.
