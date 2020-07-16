@@ -4,18 +4,20 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
 	mode: "development",
 	entry: {
-		spacer: "./scss/utils/spacer.scss",
+		"css-utility-helpers": "./scss/css-utility-helpers.scss",
+		display: "./scss/utils/display.scss",
+		display: "./scss/utils/display.scss",
 	},
 	output: {
 		path: path.resolve(__dirname, "css"),
 	},
 	watch: true,
+	// devtool: "source-map",
 	module: {
 		rules: [
 			{
 				test: /\.s?css$/,
 				use: [
-					"style-loader",
 					{
 						loader: MiniCssExtractPlugin.loader,
 						options: {
