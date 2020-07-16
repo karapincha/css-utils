@@ -19,5 +19,5 @@ CSS utility helpers are simply a pre-compiled set of CSS classes for common styl
 #### <img src="https://cdn.worldvectorlogo.com/logos/yarn.svg" height="16" /> yarn
 `yarn add css-helper-utils`
 
-#### 🌐 CDN
+#### 🌐 &nbsp;CDN
 `<link rel="stylesheet" href="http://unpkg.com/css-helper-utils@0.1.10/css/css-utility-helpers.css">`
