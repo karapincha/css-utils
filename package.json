@@ -1,6 +1,6 @@
 {
 	"name": "css-helper-utils",
-	"version": "0.1.6",
+	"version": "0.1.7",
 	"description": "CSS utility classes for faster UI development",
 	"main": "index.js",
 	"scripts": {
