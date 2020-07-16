@@ -6,8 +6,8 @@
 CSS utility helpers are simply a pre-compiled set of CSS classes for common style fixes which you could use inline on html elements. the library includes the SCSS mixins for the same as-well, if you prefer to compile them directly on your project.
 
 ## Available Utilities
-- ⚡️ Margin [1px to 40px]
-- ⚡️ Padding [1px to 40px]
+- ⚡️ Margin [`1px` ... `40px` `auto`]
+- ⚡️ Padding [`1px` ... `40px` `auto`]
 - ⚡️ Display [`none` `inline` `inline-block` `block` `table` `table-row` `table-cell` `flex` `inline-flex` `grid`]
 - More to be added...
 
