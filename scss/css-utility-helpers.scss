@@ -1,2 +1,82 @@
-@import "./utils/display.scss";
-@import "./utils/spacer.scss";
+@import "./mixins/utility-generator";
+@import "./mixins/spacer-generator";
+
+$enable-important-utilities: true !default;
+
+$spacerStart: 0;
+$spacerEnd: 40;
+$spacer: 1px !default;
+$spacers: (
+	(
+		auto: auto,
+	)
+) !default;
+@for $i from $spacerStart through $spacerEnd {
+	$spacers: map-merge(
+		$spacers,
+		(
+			$i: $spacer * $i,
+		)
+	);
+}
+
+$spacerUtilities: (
+	properties: (
+		margin: m,
+		padding: p,
+	),
+	axis: (
+		t: top,
+		r: right,
+		b: bottom,
+		l: left,
+		x: (
+			l: left,
+			r: right,
+		),
+		y: (
+			t: top,
+			b: bottom,
+		),
+	),
+);
+
+$utilities: () !default;
+$utilities: map-merge(
+	(
+		"font-size": (
+			property: font-size,
+			class: font-size,
+			values: (
+				xs: 12px,
+				sm: 14px,
+				base: 16px,
+				lg: 18px,
+				xl: 20px,
+			),
+		),
+		"font-weight": (
+			property: font-weight,
+			class: font-weight,
+			values: (
+				regular: 400,
+				medium: 500,
+				semi-bold: 600,
+				bold: 700,
+				black: 800,
+			),
+		),
+		"display": (
+			property: display,
+			class: d,
+			values: none inline inline-block block table table-row table-cell flex inline-flex grid,
+		),
+	),
+	$utilities
+);
+
+@each $key, $utility in $utilities {
+	@include generate-utility($utility);
+}
+
+@include spacer-utility($spacerUtilities, $spacers);

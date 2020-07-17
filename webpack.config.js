@@ -5,8 +5,6 @@ module.exports = {
 	mode: "development",
 	entry: {
 		"css-utility-helpers": "./scss/css-utility-helpers.scss",
-		display: "./scss/utils/display.scss",
-		display: "./scss/utils/display.scss",
 	},
 	output: {
 		path: path.resolve(__dirname, "css"),

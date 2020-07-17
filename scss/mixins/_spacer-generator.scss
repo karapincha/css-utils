@@ -1,0 +1,26 @@
+@mixin spacer-utility($utility, $spacers, $infix: "-") {
+	$properties: map-get($utility, properties);
+	$axis: map-get($utility, axis);
+
+	@each $property, $key in $properties {
+		@each $size, $value in $spacers {
+			.#{$key}-#{$size} {
+				#{$property}: #{$value} if($enable-important-utilities, !important, null);
+			}
+
+			@each $axisKey, $axisProp in $axis {
+				@if type-of($axisProp) == "list" or type-of(nth($axisProp, 1)) != "string" {
+					.#{$key}#{$axisKey}#{$infix}#{$size} {
+						@each $key, $prop in $axisProp {
+							#{$property}-#{$prop}: #{$value} if($enable-important-utilities, !important, null);
+						}
+					}
+				} @else {
+					.#{$key}#{$axisKey}#{$infix}#{$size} {
+						#{$property}-#{$axisProp}: #{$value} if($enable-important-utilities, !important, null);
+					}
+				}
+			}
+		}
+	}
+}
