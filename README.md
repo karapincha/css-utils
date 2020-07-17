@@ -9,6 +9,7 @@ CSS utility helpers are simply a pre-compiled set of CSS classes for common styl
 - ⚡️ Margin [`1px` ... `40px`, `auto`]
 - ⚡️ Padding [`1px` ... `40px`, `auto`]
 - ⚡️ Display [`none`, `inline`, `inline-block`, `block`, `table`, `table-row`, `table-cell`, `flex`, `inline-flex`, `grid`]
+- ⚡️ Font Weight [`regular: 400`, `medium: 500`, `semi-bold: 600`, `bold: 700`, `black: 800`]
 - More to be added...
 
 ## Installation
