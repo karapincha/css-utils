@@ -3,14 +3,15 @@
 
 $enable-important-utilities: true !default;
 
-$spacerStart: 0;
-$spacerEnd: 40;
+$spacerStart: 0 !default;
+$spacerEnd: 40 !default;
 $spacer: 1px !default;
 $spacers: (
 	(
 		auto: auto,
 	)
 ) !default;
+
 @for $i from $spacerStart through $spacerEnd {
 	$spacers: map-merge(
 		$spacers,
@@ -39,7 +40,7 @@ $spacerUtilities: (
 			b: bottom,
 		),
 	),
-);
+) !default;
 
 $utilities: () !default;
 $utilities: map-merge(
