@@ -1,4 +1,4 @@
-@mixin spacer-utility($utility, $spacers, $infix: "-") {
+@mixin spacer-utility($utility, $spacers, $infix: "-", $enable-important-utilities: true) {
 	$properties: map-get($utility, properties);
 	$axis: map-get($utility, axis);
 

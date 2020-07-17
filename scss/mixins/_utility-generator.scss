@@ -1,6 +1,6 @@
 // Utility generator
 // Used to generate utilities & print utilities
-@mixin generate-utility($utility, $infix: "") {
+@mixin generate-utility($utility, $infix: "", $enable-important-utilities: true) {
 	$values: map-get($utility, values);
 
 	// If the values are a list or string, convert it into a map
